@@ -29,6 +29,22 @@ public class TheaterReservation {
 
         LocalDate date = LocalDate.parse(showDate, inputFormat);
 
+        // Ask how many tickets the customer needs
+        System.out.print("How many tickets would you like? ");
+        int tickets = Integer.parseInt(input.nextLine());
+
+        // Format the customer's name
+        String formattedName = lastName + ", " + firstName;
+
+        // Display the reservation confirmation
+        String ticketWord = (tickets == 1) ? "ticket" : "tickets";
+
+        System.out.println(tickets + " " + ticketWord
+                + " reserved for " + date
+                + " under " + formattedName);
+
+        input.close();
+
 
     }
 }
